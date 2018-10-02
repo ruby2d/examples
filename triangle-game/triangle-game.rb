@@ -24,9 +24,9 @@ Triangle.new(
   color: ['red', 'green', 'blue']
 )
 
-msg = Text.new(x: 320, y: 240, text: 'Hi, Tres!', size: 20, font: '/Library/Fonts/Arial Rounded Bold.ttf')
+msg = Text.new(x: 320, y: 240, text: 'Hi, Tres!', size: 20, font: '../fonts/Ubuntu.ttf')
 
-player = Text.new(x: 0, y: 0, text: '@', size: 32, font: '/Library/Fonts/Brush Script.ttf');
+player = Text.new(x: 0, y: 0, text: '@', size: 32, font: '../fonts/Ubuntu.ttf');
 
 msg.x = 320 - msg.width / 2
 msg.y = 240 - msg.height / 2
