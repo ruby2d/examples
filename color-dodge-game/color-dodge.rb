@@ -52,7 +52,7 @@ player_life = 300
 
 # Instantiating the score text and variable
 score = 0
-score_text = Text.new(x: (get :width)-150, y: 10, text: "Score: #{score}", font: "Ubuntu.ttf", color: 'white')
+score_text = Text.new(x: (get :width)-150, y: 10, text: "Score: #{score}", font: "../fonts/Ubuntu.ttf", color: 'white')
 
 # Creating a lifebar
 lifebar = Rectangle.new(x: 10, y: 10, z: 1, width: player_life, height: 25, color: 'red')
@@ -132,4 +132,3 @@ update do
 end
 
 show
-
