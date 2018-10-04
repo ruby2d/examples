@@ -7,7 +7,6 @@ require 'ruby2d'
 
 set title: "KeyEvent Example"
 text_size = 20
-font_path = './Consolas.ttf'
 
 on :key_down do |k|
   key = k['key']
@@ -22,7 +21,6 @@ on :key_down do |k|
       y: rand((get :height) - text_size),
       text: key,
       size: text_size,
-      font: font_path,
       z: 0,
       color: 'random'
     )
