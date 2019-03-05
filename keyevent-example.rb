@@ -18,9 +18,9 @@ on :key_down do |k|
     close
   else
     Text.new(
+      key,
       x: rand((get :width) - text_size),
       y: rand((get :height) - text_size),
-      text: key,
       size: text_size,
       font: font_path,
       z: 0,
