@@ -7,7 +7,7 @@ require 'ruby2d'
 
 set title: "KeyEvent Example"
 text_size = 20
-font_path = "fonts/Ubuntu.ttf"
+font_path = "../fonts/Ubuntu.ttf"
 
 on :key_down do |k|
   key = k['key']
