@@ -2,7 +2,7 @@
 
 Made by [Tobias Wilfert](https://github.com/tobias-wilfert)
 
-**Ruby2D Version: ** 0.8.1
+**Ruby2D Version:** 0.8.1
 
 Feel free to use and modify as you wish!
 
