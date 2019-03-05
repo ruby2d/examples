@@ -1,4 +1,5 @@
 require 'ruby2d'
+require_relative 'union'
 
 light_is_on = true
 
@@ -28,10 +29,12 @@ right_circle = Circle.new(
     z: 0
 )
 
+# Create a union of all shapes that are a part of the switch
+switch = Union.new([left_circle,middle_bar,right_circle])
 
 on :mouse_down do |event|
   # If clicked while on top of the switch
-  if left_circle.contains?(event.x, event.y) || right_circle.contains?(event.x, event.y) || middle_bar.contains?(event.x, event.y)
+  if switch.contains?(event.x, event.y)
     if light_is_on # same as 'if light_is_on == true'
 
       light_is_on = false
