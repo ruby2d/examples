@@ -1,6 +1,6 @@
 # Toggle Switch
 
-Made by [Tobias Wilfert] (https://github.com/tobias-wilfert)
+Made by [Tobias Wilfert](https://github.com/tobias-wilfert)
 
 **Ruby2D Version: ** 0.8.1
 
