@@ -1,4 +1,4 @@
-# Keyevent Exampel
+# KeyEvent Example
 
 Made by [slime-man](https://github.com/slime-man)
 
