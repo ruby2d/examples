@@ -16,3 +16,6 @@ as change the background color of the application.
 
 ## Triangle Game
 A simple "Triangle Game" that allows you to move a Roguelike '@' around the window (and off of it).
+
+## Brick Game
+A simple brick break / breakout game.
