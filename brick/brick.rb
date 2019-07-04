@@ -8,7 +8,7 @@ require './lib/match'
 # Window & FPS
 ##
 
-set title: 'AlleyWay',
+set title: 'Brick',
     background: 'black',
     with: 640,
     height: 480,
