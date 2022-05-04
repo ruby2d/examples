@@ -9,6 +9,7 @@ Feel free to use and modify as you wish!
 ## Requirements:
 
 [Voicemeeter](https://voicemeeter.com/) Version `basic`, `banana` or `potato`
+
 [Ruby Wrapper for Voicemeeter API](https://github.com/onyx-and-iris/voicemeeter-api-ruby)
 
 ## Controls:
