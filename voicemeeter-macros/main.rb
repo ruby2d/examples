@@ -17,7 +17,7 @@ def make_app(num_buttons)
         end
 
     # initialize button states
-    @button_states = Array.new(@num_buttons, true)
+    @button_states = Array.new(@num_buttons, false)
 
     # create and position labels
     @labels =
@@ -31,17 +31,17 @@ def make_app(num_buttons)
     on :mouse_down do |event|
         @buttons.each.with_index do |button, i|
             if button.contains?(event.x, event.y)
-                # perform any voicemeeter operations, pass button state
-                @macros.send("button_#{i + 1}", @button_states[i])
-
                 # change button color and toggle state
                 if @button_states[i]
                     @button_states[i] = false
-                    button.color = 'red'
+                    button.color = 'blue'
                 else
                     @button_states[i] = true
-                    button.color = 'blue'
+                    button.color = 'red'
                 end
+
+                # perform any voicemeeter operations
+                @macros.send("button_#{i + 1}", @button_states[i])
             end
         end
     end
@@ -49,16 +49,17 @@ def make_app(num_buttons)
     on :key_down do |event|
         i = event.key.to_i - 1
         if (0...@num_buttons).include? i
-            @macros.send("button_#{event.key.to_i}", @button_states[i])
-
             # change button color and toggle state
             if @button_states[i]
                 @button_states[i] = false
-                @buttons[i].color = 'red'
+                @buttons[i].color = 'blue'
             else
                 @button_states[i] = true
-                @buttons[i].color = 'blue'
+                @buttons[i].color = 'red'
             end
+
+            # perform any voicemeeter operations
+            @macros.send("button_#{event.key}", @button_states[i])
         end
     end
 end
