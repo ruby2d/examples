@@ -5,22 +5,23 @@ require_relative 'macros'
 include Macro
 
 def make_app(num_buttons)
+    @num_buttons = num_buttons
     set title: "Voicemeeter.#{@vmr.kind.name.capitalize} Macros"
     set height: 110
-    set width: (num_buttons * 100) + (num_buttons * 5)
+    set width: (@num_buttons * 100) + (@num_buttons * 5)
 
     # create and position buttons
     @buttons =
-        (0.upto(num_buttons)).map do |i|
+        (0.upto(@num_buttons)).map do |i|
             Square.new(x: i * 105, y: 5, size: 100, color: 'blue')
         end
 
     # initialize button states
-    @button_states = Array.new(num_buttons, true)
+    @button_states = Array.new(@num_buttons, true)
 
     # create and position labels
     @labels =
-        (0.upto(num_buttons)).map do |i|
+        (0.upto(@num_buttons)).map do |i|
             Text.new("macro [#{i + 1}]", x: i * 105 + 5, y: 50, color: 'white')
         end
 
@@ -47,15 +48,17 @@ def make_app(num_buttons)
 
     on :key_down do |event|
         i = event.key.to_i - 1
-        @macros.send("button_#{event.key.to_i}", @button_states[i])
+        if (0...@num_buttons).include? i
+            @macros.send("button_#{event.key.to_i}", @button_states[i])
 
-        # change button color and toggle state
-        if @button_states[i]
-            @button_states[i] = false
-            @buttons[i].color = 'red'
-        else
-            @button_states[i] = true
-            @buttons[i].color = 'blue'
+            # change button color and toggle state
+            if @button_states[i]
+                @button_states[i] = false
+                @buttons[i].color = 'red'
+            else
+                @button_states[i] = true
+                @buttons[i].color = 'blue'
+            end
         end
     end
 end
