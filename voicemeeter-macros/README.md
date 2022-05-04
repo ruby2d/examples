@@ -8,8 +8,8 @@ Feel free to use and modify as you wish!
 
 ## Requirements:
 
-    Latest [Voicemeeter](https://voicemeeter.com/) Version `basic`, `banana` or `potato`
-    [Ruby Wrapper for Voicemeeter API](https://github.com/onyx-and-iris/voicemeeter-api-ruby)
+[Voicemeeter](https://voicemeeter.com/) Version `basic`, `banana` or `potato`
+[Ruby Wrapper for Voicemeeter API](https://github.com/onyx-and-iris/voicemeeter-api-ruby)
 
 ## Controls:
 
